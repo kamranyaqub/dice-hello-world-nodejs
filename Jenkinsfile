@@ -6,7 +6,7 @@ registryCredential = 'dockerhub'
 stages {
 stage('Build') {
 steps {
-sh 'docker build -t umermunirrr/test-node-app .'
+sh 'docker build -t kamranyaqub1/test-node-app .'
 }
 }
 stage('Test') {
@@ -21,7 +21,7 @@ stage('Publish') {
 steps{
 script {
 docker.withRegistry( '', registryCredential ) {
-sh 'docker push umermunirrr/test-node-app:latest'
+sh 'docker push kamranyaqub1/test-node-app:latest'
 }
 }
 }
